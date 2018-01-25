@@ -5,7 +5,7 @@ Summary: A set of commands and yum plugins that support a Katello host
 Group:   Development/Languages
 License: LGPLv2
 URL:     https://github.com/Katello/katello-agent
-Source0: https://codeload.github.com/Katello/katello-agent/tar.gz/%{version}#/%{name}-%{version}.tar.gz
+Source0: https://codeload.github.com/Katello/katello-host-tools/tar.gz/%{version}#/%{name}-%{version}.tar.gz
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch

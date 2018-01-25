@@ -404,6 +404,7 @@ whitelist = rubygem-robotex
   rubygem-robotex
   rubygem-runcible
   rubygem-terminal-table
+  katello-host-tools
 
 
 [katello-thirdparty-rhel7]
