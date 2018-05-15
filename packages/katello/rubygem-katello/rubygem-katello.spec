@@ -136,8 +136,8 @@ BuildRequires: npm(lodash) >= 4.17.5
 BuildRequires: npm(lodash) < 5.0.0
 BuildRequires: npm(patternfly) >= 3.41.1
 BuildRequires: npm(patternfly) < 4.0.0
-BuildRequires: npm(patternfly-react) >= 1.11.0
-BuildRequires: npm(patternfly-react) < 2.0.0
+BuildRequires: npm(patternfly-react) >= 2.1.0
+BuildRequires: npm(patternfly-react) < 3.0.0
 BuildRequires: npm(prop-types) >= 15.6.0
 BuildRequires: npm(prop-types) < 16.0.0
 BuildRequires: npm(react) >= 16.0.0
