@@ -6,7 +6,7 @@
 
 Summary: Basic Pulp support for Foreman Smart-Proxy
 Name: rubygem-%{gem_name}
-Version: 1.3.0
+Version: 1.4.0
 Release: 1%{?dist}
 Group: Applications/System
 License: GPLv3
@@ -14,15 +14,10 @@ URL: https://github.com/theforeman/smart-proxy-pulp
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 
 Requires: ruby(rubygems)
-Requires: foreman-proxy >= 1.6.0
+Requires: foreman-proxy >= 1.22.0
 
-%if 0%{?rhel} == 6
-Requires: ruby(abi)
-BuildRequires: ruby(abi)
-%else
 Requires: ruby(release)
 BuildRequires: ruby(release)
-%endif
 BuildRequires: rubygems-devel
 
 BuildRequires: ruby(rubygems)
@@ -66,9 +61,10 @@ cp -pa .%{gem_instdir}/settings.d/pulpnode.yml.example %{buildroot}%{foreman_pro
 %{gem_instdir}/bundler.d
 %{gem_instdir}/settings.d
 %{foreman_proxy_bundlerd_dir}/pulp.rb
+%config(noreplace) %{_sysconfdir}/foreman-proxy/settings.d/pulp3.yml
 %config(noreplace) %{_sysconfdir}/foreman-proxy/settings.d/pulp.yml
 %config(noreplace) %{_sysconfdir}/foreman-proxy/settings.d/pulpnode.yml
-%doc %{gem_instdir}/LICENSE
+%license %{gem_instdir}/LICENSE
 
 %exclude %{gem_cache}
 %exclude %{gem_instdir}/Gemfile
@@ -79,6 +75,9 @@ cp -pa .%{gem_instdir}/settings.d/pulpnode.yml.example %{buildroot}%{foreman_pro
 
 
 %changelog
+* Fri Mar 08 2019 Justin Sherrill <jsherril@redhat.com> 1.4.0-1
+- Updated samrt_proxy_pulp to version 1.4.0
+ 
 * Tue Sep 06 2016 Dominic Cleal <dominic@cleal.org> 1.3.0-1
 - Updated smart_proxy_pulp to version 1.3.0 (dmitri@appliedlogic.ca)
 
