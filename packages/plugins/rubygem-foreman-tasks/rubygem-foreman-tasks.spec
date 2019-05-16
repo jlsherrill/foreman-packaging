@@ -11,7 +11,7 @@
 
 Name: %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.15.5
-Release: 1%{?foremandist}%{?dist}
+Release: 2%{?foremandist}%{?dist}
 Summary: Foreman plugin for showing tasks information for resources and users
 Group: Applications/Systems
 License: GPLv3
@@ -264,6 +264,9 @@ type foreman-selinux-relabel >/dev/null 2>&1 && foreman-selinux-relabel 2>&1 >/d
 exit 0
 
 %changelog
+* Thu May 16 2019 Justin Sherrill <jlsherrill@gmail.com> 0.15.5-2
+- Rebuild for vendor js updates
+
 * Mon Apr 15 2019 Adam Ruzicka <aruzicka@redhat.com> 0.15.5-1
 - Update to 0.15.5
 
